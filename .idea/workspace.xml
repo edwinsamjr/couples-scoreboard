@@ -13,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -25,24 +26,99 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/workspace/edwin-sam-jr-student-code/module-1/17_File_IO_Writing/exercise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DatabaseVersion" />
+      <recent name="OldVersions" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="CLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CLI" />
+  <component name="RunManager" selected="Application.CLI_DB">
+    <configuration name="CLI_DB" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="USERNAME" value="postgres" />
+        <env name="PASSWORD" value="postgres1" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="DatabaseVersion.CLI_DB" />
+      <module name="CouplesScoreboardApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DatabaseVersion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcGameDAOTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JdbcGameDAOTest" />
       <module name="CouplesScoreboardApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in CouplesScoreboardApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CouplesScoreboardApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcGameDAOTest.calculates_record" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CouplesScoreboardApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JdbcGameDAOTest" />
+      <option name="METHOD_NAME" value="calculates_record" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcGameDAOTest.filters_games_by_date" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CouplesScoreboardApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JdbcGameDAOTest" />
+      <option name="METHOD_NAME" value="filters_games_by_date" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcGameDAOTest.filters_games_by_name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CouplesScoreboardApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JdbcGameDAOTest" />
+      <option name="METHOD_NAME" value="filters_games_by_name" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CLI_DB" />
+      <item itemvalue="JUnit.All in CouplesScoreboardApp" />
+      <item itemvalue="JUnit.JdbcGameDAOTest.calculates_record" />
+      <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_name" />
+      <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_date" />
+      <item itemvalue="Application.JdbcGameDAOTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CLI" />
+        <item itemvalue="JUnit.All in CouplesScoreboardApp" />
+        <item itemvalue="Application.JdbcGameDAOTest" />
+        <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_date" />
+        <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_name" />
+        <item itemvalue="JUnit.JdbcGameDAOTest.calculates_record" />
       </list>
     </recent_temporary>
   </component>
@@ -56,5 +132,15 @@
       <updated>1644711575471</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,15 +1,23 @@
-import java.io.*;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+
+import javax.sql.DataSource;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 
-public class Scoreboard {
+public class ScoreboardDB {
+
+    private final JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
 
     Scanner scanner = new Scanner(System.in);
+    Game newGame = new Game();
 
-    Menu menu = new Menu();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/DD/yyyy");
 
     public void displayLookUpOptions(Object[] options) {
         for (int i = 0; i < options.length; i++) {
@@ -58,8 +66,10 @@ public class Scoreboard {
 
 
     public void enterNewGame(Object[] options) {
-        //Receive date from user and store it in variable "date"
-        String game = (String) getChoiceFromOptions(options, "Games");
+        //Receive game choice from user
+        String gameName = (String) getChoiceFromOptions(options, "Games");
+
+        //Receive date from user and convert to LocalDate
         String dateString = getDateFromUser();
         String[] userInput = splitUserInputDate(dateString);
         int[] dateInts = convertStringDateToInts(userInput);
@@ -73,12 +83,21 @@ public class Scoreboard {
         String edwinScoreString = getEdwinScoreFromUser();
         int edwinScore = convertEdwinScoreToInt(edwinScoreString);
 
+        //Store game details into instance of Game
+        newGame.setName(gameName);
+        newGame.setDate(date);
+        newGame.setRachelScore(rachelScore);
+        newGame.setEdwinScore(edwinScore);
+
+        //Add game into DB
+        addNewGame(newGame);
+
         //Congratulate Winner
-        String winnerName = getWinnerName(game, rachelScore, edwinScore);
-        congratulateWinner(game, winnerName, rachelScore, edwinScore);
+        newGame.congratulateWinner();
 
         try (PrintWriter logFile = new PrintWriter(new FileWriter("game-log.txt", true))) {
-            logFile.printf("%s|%s|%s|%d|%d%n", date, game, winnerName, rachelScore, edwinScore);
+            logFile.printf("%s|%s|%s|%d|%d%n", newGame.getDate(), newGame.getName(),
+                    newGame.getWinnerName(), newGame.getRachelScore(), newGame.getEdwinScore());
 
         } catch (FileNotFoundException e) {
             System.out.println("Log File not found");
@@ -91,7 +110,7 @@ public class Scoreboard {
     public String getDateFromUser() {
 
         System.out.println();
-        System.out.print("Please enter date of game (M/DD/YYYY) >>> ");
+        System.out.print("Please enter date of game (MM-DD-YYYY) >>> ");
         String userInput = scanner.nextLine();
 
         return userInput;
@@ -99,7 +118,7 @@ public class Scoreboard {
     }
 
     public String[] splitUserInputDate(String userInput) {
-        String[] dateNums = userInput.split("/");
+        String[] dateNums = userInput.split("-");
         return dateNums;
     }
 
@@ -143,75 +162,23 @@ public class Scoreboard {
         return scoreInt;
     }
 
+    private void addNewGame(Game game) {
+        String sql = "INSERT INTO gamelog (date, game, winner, rachel_score, edwin_score)" +
+                     " VALUES (?, ?, ?, ?, ?);";
 
-    public void congratulateWinner(String game, String winnerName, int rachelScore, int edwinScore) {
+        this.jdbcTemplate.queryForRowSet(sql,game.getDate(),game.getName(),
+                game.getWinnerName(), game.getRachelScore(), game.getEdwinScore());
 
-        boolean isScrabble = game.equals("Scrabble");
-        boolean isWordle = game.equals("Wordle");
-        boolean isCupPong = game.equals("Cup Pong");
-        boolean isWordHunt = game.equals("Word Hunt");
-        boolean is8Ball = game.equals("8 Ball");
-
-        if (isScrabble || isWordHunt || isWordle) {
-
-            if (winnerName.equals("Rachel")) {
-                System.out.println();
-                System.out.printf("Congratulations Rachel! You won %d to %d!", rachelScore, edwinScore);
-            } else if (winnerName.equals("Edwin")) {
-                System.out.println();
-                System.out.printf("Congratulations Edwin! You won %d to %d!", edwinScore, rachelScore);
-            } else {
-                System.out.printf("Draw! The score was %d to %d!", rachelScore, edwinScore);
-            }
-        }
-
-        if (isCupPong || is8Ball) {
-
-            if (winnerName.equals("Rachel")) {
-                System.out.println();
-                System.out.printf("Congratulations Rachel! You won with %d remaining!", edwinScore);
-            } else if (winnerName.equals("Edwin")) {
-                System.out.println();
-                System.out.printf("Congratulations Edwin! You won with %d remaining!", rachelScore);
-            } else {
-                System.out.printf("Draw! The score was %d to %d!", rachelScore, edwinScore);
-            }
-
-
-        }
 
     }
 
-    public String getWinnerName(String game, int rachelStore, int edwinScore) {
-        String winnerName = "Draw";
+    protected BasicDataSource getDataSource () {
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/ScoreboardDB");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("postgres1");
 
-        boolean isScrabble = game.equals("Scrabble");
-        boolean isWordle = game.equals("Wordle");
-        boolean isCupPong = game.equals("Cup Pong");
-        boolean isWordHunt = game.equals("Word Hunt");
-        boolean is8Ball = game.equals("8 Ball");
-        boolean rachelScoreHigher = rachelStore > edwinScore;
-        boolean edwinScoreHigher = edwinScore > rachelStore;
-
-        if (isScrabble || isWordHunt) {
-            if (rachelScoreHigher) {
-                winnerName = "Rachel";
-            } else if (edwinScoreHigher) {
-                winnerName = "Edwin";
-            }
-        }
-
-        if (isWordle || isCupPong || is8Ball) {
-            if (rachelScoreHigher) {
-                winnerName = "Edwin";
-            } else if (edwinScoreHigher) {
-                winnerName = "Rachel";
-            }
-        }
-
-        return winnerName;
-
+        return dataSource;
     }
-
 
 }

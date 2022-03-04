@@ -1,2 +1,23 @@
 Date | Game | Winner | Rachel Score | Edwin Score
 
+
+2022-02-19|Wordle|Rachel|6|9
+2029-02-22|Scrabble|Edwin|3|5
+2022-02-23|Wordle|Rachel|3|4
+2021-04-29|8 Ball|Edwin|2|0
+2022-01-25|Wordle|Draw|4|4
+2022-02-04|Word Hunt|Edwin|15400|16000
+1998-03-29|Scrabble|Edwin|199|308
+2011-03-22|Cup Pong|Rachel|3|4
+2022-02-28|Scrabble|Rachel|330|204
+2022-02-03|Cup Pong|Edwin|3|2
+2022-02-02|Wordle|Edwin|3|2
+2022-02-02|Wordle|Draw|3|3
+2022-02-16|Wordle|Draw|4|4
+2022-03-02|Wordle|Rachel|3|4
+0022-02-02|Wordle|Rachel|3|4
+2022-03-03|Wordle|Draw|4|4
+2022-03-02|Wordle|Rachel|0|4
+2022-03-02|Wordle|Rachel|0|4
+2022-03-02|Wordle|Rachel|0|5
+2022-03-02|Wordle|Rachel|0|5
