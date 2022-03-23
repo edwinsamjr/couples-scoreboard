@@ -26,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/workspace/capstone-2-team-4/tenmo-server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -106,11 +106,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.CLI_DB" />
+      <item itemvalue="Application.JdbcGameDAOTest" />
       <item itemvalue="JUnit.All in CouplesScoreboardApp" />
       <item itemvalue="JUnit.JdbcGameDAOTest.calculates_record" />
-      <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_name" />
       <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_date" />
-      <item itemvalue="Application.JdbcGameDAOTest" />
+      <item itemvalue="JUnit.JdbcGameDAOTest.filters_games_by_name" />
     </list>
     <recent_temporary>
       <list>

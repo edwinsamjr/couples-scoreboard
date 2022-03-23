@@ -40,7 +40,8 @@ public class CLI_DB {
     }
 
     public CLI_DB(DataSource dataSource) {
-        this.menu = new Menu(System.in, System.out);;
+        this.menu = new Menu(System.in, System.out);
+        ;
         gameDAO = new JdbcGameDAO(dataSource);
     }
 
@@ -55,18 +56,12 @@ public class CLI_DB {
             String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
             if (choice.equals(MAIN_MENU_OPTION_LOOK_UP_SCORES)) {
-                //Search scores
-//                String game = (String) getChoiceFromOptions(GameLookUp.gameOptionsOverall, "Games: ");
-//                String timeframe = (String) getChoiceFromOptions(GameLookUp.timeFrameOptions, "Time Frame: ");
-//
-//                printGames(game, timeframe);
-
                 searchGames(GameLookUp.gameOptionsOverall);
             } else if (choice.equals(MAIN_MENU_OPTION_ENTER_SCORE)) {
                 //Get game from user
                 enterNewGame(GameLookUp.gameOptions);
             } else if (choice.equals(MAIN_MENU_OPTION_SEARCH_POINTS)) {
-              //Get points based on time frame
+                //Get points based on time frame
 
             } else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
                 break;
@@ -74,8 +69,6 @@ public class CLI_DB {
         }
 
     }
-
-
 
 
     public void displayLookUpOptions(Object[] options) {
@@ -122,7 +115,7 @@ public class CLI_DB {
             gameDAO.getAllGamesAllTime();
         } else if (gameName.equals("Overall") && timeframe.equals(SEARCH_THIS_MONTH)) {
             gameDAO.getAllGamesThisMonth();
-        } else if (gameName.equals("Overall") && timeframe.equals(SEARCH_BY_DATE)){
+        } else if (gameName.equals("Overall") && timeframe.equals(SEARCH_BY_DATE)) {
             LocalDate startDate = getStartDateFromUser();
             LocalDate endDate = getEndDateFromUser();
 
@@ -195,7 +188,7 @@ public class CLI_DB {
                 isValidDate = true;
 
 
-            } catch (DateTimeException | NumberFormatException |ArrayIndexOutOfBoundsException e) {
+            } catch (DateTimeException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 System.out.println("Invalid Date");
             }
         }
@@ -206,11 +199,11 @@ public class CLI_DB {
 
     public String receiveUserInputDate() {
 
-            System.out.println();
-            System.out.print("Please enter date of game (MM-DD-YYYY) >>> ");
-            String userInput = scanner.nextLine();
+        System.out.println();
+        System.out.print("Please enter date of game (MM-DD-YYYY) >>> ");
+        String userInput = scanner.nextLine();
 
-            return userInput;
+        return userInput;
 
     }
 
@@ -270,7 +263,6 @@ public class CLI_DB {
     }
 
     /**
-     *
      * @param name
      * @param score
      * @return
@@ -292,7 +284,7 @@ public class CLI_DB {
         boolean isValid8BallScore = score > -1 && score < 8;
 
 
-        if (isScrabble && isValidScrabbleScore){
+        if (isScrabble && isValidScrabbleScore) {
 
         } else if (isWordle && isValidWordleScore) {
 
@@ -304,7 +296,7 @@ public class CLI_DB {
 
         } else if (is8Ball && isValid8BallScore) {
 
-        } else{
+        } else {
             throw new IllegalArgumentException();
         }
 
@@ -349,7 +341,7 @@ public class CLI_DB {
                 isValidDate = true;
 
 
-            } catch (DateTimeException | NumberFormatException |ArrayIndexOutOfBoundsException e) {
+            } catch (DateTimeException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 System.out.println("Invalid Date");
             }
         }
@@ -379,7 +371,7 @@ public class CLI_DB {
                 isValidDate = true;
 
 
-            } catch (DateTimeException | NumberFormatException |ArrayIndexOutOfBoundsException e) {
+            } catch (DateTimeException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 System.out.println("Invalid Date");
             }
         }
@@ -394,12 +386,6 @@ public class CLI_DB {
 
         return userInput;
     }
-
-
-
-
-
-
 
 
 }

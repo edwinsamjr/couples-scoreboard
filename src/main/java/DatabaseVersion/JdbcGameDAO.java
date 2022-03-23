@@ -191,17 +191,17 @@ public class JdbcGameDAO implements GameDAO {
 
     @Override
     public void getPointsALlTime() {
-
+        //TODO - Write points methods
     }
 
     @Override
     public void getPointsThisMonth() {
-
+        //TODO - Write points methods
     }
 
     @Override
     public void getPointsByDate(LocalDate startDate, LocalDate endDate) {
-
+        //TODO - Write points methods
     }
 
     @Override
