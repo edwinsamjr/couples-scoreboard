@@ -41,7 +41,6 @@ public class CLI_DB {
 
     public CLI_DB(DataSource dataSource) {
         this.menu = new Menu(System.in, System.out);
-        ;
         gameDAO = new JdbcGameDAO(dataSource);
     }
 
@@ -362,7 +361,7 @@ public class CLI_DB {
         boolean isValidDate = false;
         LocalDate date = null;
 
-        while (isValidDate == false) {
+        while (!isValidDate) {
             try {
                 String dateString = receiveSearchEndDateFromUser();
                 String[] userInput = splitUserInputDate(dateString);

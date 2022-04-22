@@ -2,19 +2,19 @@ package LogFileVersions;
 
 import java.time.LocalDate;
 
-public class Game {
+public class GameLF {
 
     String name;
     int rachelScore;
     int edwinScore;
     LocalDate date;
 
-    public Game() {
+    public GameLF() {
     }
 
     ;
 
-    public Game(String name, LocalDate date, int rachelScore, int edwinScore) {
+    public GameLF(String name, LocalDate date, int rachelScore, int edwinScore) {
         this.name = name;
         this.date = date;
         this.rachelScore = rachelScore;

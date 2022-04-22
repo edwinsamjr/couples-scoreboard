@@ -125,7 +125,7 @@ public class Game {
 
     @Override
     public String toString() {
-        String string = String.format("%s|%s|%s|R:%d|E:%d", this.date, this.name, this.getWinnerName(), this.rachelScore, this.edwinScore);
+        String string = String.format("%10s | %-8s | %-6s | R:%-4d | E:%-3d |", this.date, this.name, this.getWinnerName(), this.rachelScore, this.edwinScore);
 
         return string;
     }

@@ -6,10 +6,7 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import javax.sql.DataSource;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JdbcGameDAO implements GameDAO {
 
@@ -218,6 +215,8 @@ public class JdbcGameDAO implements GameDAO {
 
     @Override
     public void printGameDetails(List<Game> games){
+        System.out.println("   DATE    |   GAME   | WINNER | RACHEL | EDWIN |");
+        System.out.println("-------------------------------------------------");
         for (Game game : games) {
             System.out.println(game.toString());
         }
@@ -301,6 +300,7 @@ public class JdbcGameDAO implements GameDAO {
         }
 
     }
+
 
 
 }

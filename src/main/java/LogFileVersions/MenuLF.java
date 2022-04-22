@@ -6,16 +6,16 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
-public class Menu {
+public class MenuLF {
 
     private PrintWriter out;
     private Scanner in;
 
-    public Menu(){
+    public MenuLF(){
 
     }
 
-    public Menu(InputStream input, OutputStream output) {
+    public MenuLF(InputStream input, OutputStream output) {
         this.out = new PrintWriter(output);
         this.in = new Scanner(input);
     }

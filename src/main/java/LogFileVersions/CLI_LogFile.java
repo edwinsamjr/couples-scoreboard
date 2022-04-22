@@ -8,18 +8,18 @@ public class CLI_LogFile {
     private static final String MAIN_MENU_OPTION_EXIT = "Exit";
     private static final String[] MAIN_MENU_OPTIONS = {MAIN_MENU_OPTION_LOOK_UP_SCORES, MAIN_MENU_OPTION_ENTER_SCORE, MAIN_MENU_OPTION_EXIT};
 
-    private Menu menu = new Menu();
+    private MenuLF menuLF = new MenuLF();
     ScoreboardLogFile scoreboard = new ScoreboardLogFile();
 
-    public CLI_LogFile(Menu menu) {
-        this.menu = menu;
+    public CLI_LogFile(MenuLF menuLF) {
+        this.menuLF = menuLF;
     }
 
 
 
     public static void main(String[] args) {
-        Menu menu = new Menu(System.in, System.out);
-        CLI_LogFile cli = new CLI_LogFile(menu);
+        MenuLF menuLF = new MenuLF(System.in, System.out);
+        CLI_LogFile cli = new CLI_LogFile(menuLF);
         cli.run();
     }
 
@@ -31,17 +31,17 @@ public class CLI_LogFile {
         while (true) {
             System.out.println();
 
-            String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
+            String choice = (String) menuLF.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
             if (choice.equals(MAIN_MENU_OPTION_LOOK_UP_SCORES)) {
                 //Search scores
-                String game = (String) scoreboard.getChoiceFromOptions(GameLookUp.gameOptions, "Games: ");
-                String timeframe = (String) scoreboard.getChoiceFromOptions(GameLookUp.timeFrameOptions, "Time Frame: ");
+                String game = (String) scoreboard.getChoiceFromOptions(GameLookUpLF.gameOptions, "Games: ");
+                String timeframe = (String) scoreboard.getChoiceFromOptions(GameLookUpLF.timeFrameOptions, "Time Frame: ");
 
                 scoreboard.printGames(game, timeframe);
             } else if (choice.equals(MAIN_MENU_OPTION_ENTER_SCORE)) {
                 //Get game from user
-                scoreboard.enterNewGame(GameLookUp.gameOptions);
+                scoreboard.enterNewGame(GameLookUpLF.gameOptions);
             }else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
                 break;
             }

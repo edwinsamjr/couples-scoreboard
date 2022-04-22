@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ScoreboardLogFile {
 
     Scanner scanner = new Scanner(System.in);
-    Game newGame = new Game();
+    GameLF newGame = new GameLF();
 
     public void displayLookUpOptions(Object[] options) {
         for (int i = 0; i < options.length; i++) {
