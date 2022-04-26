@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3b8db7-60c0-4d9a-b8e2-5de9da0243c9" name="Changes" comment="" />
+    <list default="true" id="4b3b8db7-60c0-4d9a-b8e2-5de9da0243c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ScoreboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ScoreboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/CLI_DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/CLI_DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/GameDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/GameDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/GameLookUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/GameLookUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/JdbcGameDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/JdbcGameDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseVersion/ScoreboardDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseVersion/ScoreboardDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LogFileVersions/CLI_LogFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LogFileVersions/CLI_LogFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LogFileVersions/GameLF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LogFileVersions/GameLF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LogFileVersions/GameLookUpLF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LogFileVersions/GameLookUpLF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LogFileVersions/MenuLF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LogFileVersions/MenuLF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LogFileVersions/ScoreboardLogFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LogFileVersions/ScoreboardLogFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LogFileVersions/ScoreboardOriginal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LogFileVersions/ScoreboardOriginal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ScoreboardDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ScoreboardDB.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,19 +43,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2523u6e4NiiPbKZrGwvk7ZDmBDo" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/workspace/pet-pals-capstone/java" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/edwin/Documents/GitHub-Projects/couples-scoreboard-spring"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -43,12 +74,14 @@
   </component>
   <component name="RunManager" selected="Application.CLI_DB">
     <configuration name="CLI_DB" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="USERNAME" value="postgres" />
         <env name="PASSWORD" value="postgres1" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="DatabaseVersion.CLI_DB" />
-      <module name="CouplesScoreboardApp" />
+      <module name="couples-scoreboard" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DatabaseVersion.*" />
@@ -135,6 +168,17 @@
       <updated>1644711575471</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
